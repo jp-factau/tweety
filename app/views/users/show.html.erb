@@ -1,0 +1,10 @@
+<h1> <%= current_user.name %></h1>
+<%= link_to "nova mensagem", :new_message %>
+<%= link_to "logout", :destroy_session, method: :delete %>
+<hr>
+<h2> minhas últimas mensagens</h2>
+<ul>
+  <% @user.messages.each do |message| %>
+    <li> <%= message %> </li>
+  <% end %>
+</ul>

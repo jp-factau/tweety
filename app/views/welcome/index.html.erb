@@ -1,0 +1,12 @@
+<h1> Tweety </h1>
+
+<%= link_to "Cadastre-se", :new_user %> <br> 
+<%= link_to "Login", :new_session %>
+
+<hr>
+<h2> Ultimas mensagens </h2>
+<ul>
+<% @messages.each do |message| %>
+  <li> <%= "#{message} - postada por: #{message.user.username}" %></li>
+<% end %>
+</ul>

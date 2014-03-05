@@ -1,0 +1,9 @@
+<h1> Cadastro de usuário </h1>
+
+<%= simple_form_for @user, url: :new_user do |f| %>
+<%= f.input :name %>
+<%= f.input :username %>
+<%= f.input :password %>
+<%= f.input :password_confirmation %>
+<%= f.submit "cadastrar" %>
+<% end %>
